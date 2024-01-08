@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<body style="background-color: lightgreen">
+    <div class="jumbotron" >
+        <h1 style="text-align: center">Welcome to the Short Link App</h1>
+        <marquee behavior="scroll" direction="left">Create short links, track analytics, and more!</marquee>
+        <hr class="my-4">
+        <p>Get started by <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}" role="button">Login</a></p>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<head>
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/one.jpg') }}');
+             background-size: cover;
+             background-position: center;
+             height: 100vh;
+             margin: 0;">
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form method="post" action="{{ url_for('login') }}">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" class="form-control" required>  <br> <br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" class="form-control" required>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}
